@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+   <meta name="apple-mobile-web-app-capable" content="yes">
+   <meta name="apple-mobile-web-app-status-bar-style" content="black">
+   <meta name="format-detection" content="telephone=no">
+   <meta name="msapplication-tap-highlight" content="no">
+   <!-- Your app title -->
+   <title>ElectroPeak's Flame Controller</title>
+   <link rel="stylesheet" href="css/framework7.min.css">
+   <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+   <div id="app">
+      <div class="statusbar"></div>
+      <div class="view view-main view-init" data-url="/">
+         <div class="page ">
+            <div class="navbar">
+               <div class="navbar-inner">
+
+                  <div class="title sliding ">EP's Flame Controller</div>
+               </div>
+            </div>
+            <div class="toolbar tabbar tabbar-labels toolbar-bottom-md">
+               <div class="toolbar-inner">
+                  <a href="#staticColorTab" class="tab-link tab-link-active">
+                     <i class="icon material-icons">palette</i>
+                     <span class="tabbar-label ">Flame Color</span>
+                  </a>
+                  <a href="#animationTab" class="tab-link">
+                     <i class="icon material-icons">settings</i>
+                     <span class="tabbar-label ">Flame Settings</span>
+                  </a>
+               </div>
+            </div>
+            <div class="tabs">
+               <div id="staticColorTab" class="page-content tab tab-active" style="overflow:hidden">
+                  <div class="block-title ">Brightness<span id="brightnessSliderVal"></span></div>
+                  <div class="list simple-list">
+                     <ul>
+                        <li>
+                           <div class="item-cell width-auto flex-shrink-0">
+                              <i class="icon material-icons">brightness_low</i>
+                           </div>
+                           <div class="item-cell flex-shrink-3">
+                              <div class="range-slider range-slider-init color-orange" id="brightnessSliderdiv"
+                                 data-label="true">
+                                 <input id="brightnessSlider" type="range" min="0" max="100" step="1" value="50">
+                              </div>
+                           </div>
+                           <div class="item-cell width-auto flex-shrink-0">
+                              <i class="icon material-icons">brightness_high</i>
+                           </div>
+                        </li>
+                     </ul>
+                  </div>
+                  <div id="gradient-settings">
+                     <div id="gradient-stops">
+                        <div class="gradient-color-stops" id="color-stop-1"></div>
+                        <div class="gradient-color-stops" id="color-stop-2"></div>
+                        <div class="gradient-color-stops" id="color-stop-3"></div>
+                        <div class="gradient-color-stops" id="color-stop-4"></div>
+                     </div>
+                     <div id="fire-gradient">
+                     </div>
+                  </div>
+
+               </div>
+               <div id="animationTab" class="page-content tab">
+
+                  <div class="block-title ">FPS</div>
+                  <div class="list simple-list">
+                     <ul>
+                        <li>
+                           <div class="item-cell flex-shrink-3">
+                              <div class="range-slider range-slider-init " id="FPSSlider" data-label="true">
+                                 <input type="range" min="5" max="200" step="1" value="100">
+                              </div>
+                           </div>
+                        </li>
+                     </ul>
+                  </div>
+
+                  <div class="block-title ">Spariking</div>
+                  <div class="list simple-list">
+                     <ul>
+                        <li>
+                           <div class="item-cell flex-shrink-3">
+                              <div class="range-slider range-slider-init " id="SparkingSlider" data-label="true">
+                                 <input type="range" min="5" max="250" step="1" value="60">
+                              </div>
+                           </div>
+                        </li>
+                     </ul>
+                  </div>
+
+                  <div class="block-title ">Cooling</div>
+                  <div class="list simple-list">
+                     <ul>
+                        <li>
+                           <div class="item-cell flex-shrink-3">
+                              <div class="range-slider range-slider-init " id="CoolingSlider" data-label="true">
+                                 <input type="range" min="0" max="100" step="1" value="20">
+                              </div>
+                           </div>
+
+                        </li>
+                     </ul>
+                  </div>
+
+               </div>
+
+
+            </div>
+         </div>
+      </div>
+   </div>
+   </div>
+   <script type="text/javascript" src="cordova.js"></script>
+   <script type="text/javascript" src="js/framework7.min.js"></script>
+   <script type="text/javascript" src="js/my-app.js"></script>
+</body>
+
+</html>

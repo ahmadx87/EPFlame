@@ -1,0 +1,159 @@
+/*
+   statusbar-overlay sets the background color for the overlay. Black text is the default when the statusbar plugin is not added. When the
+   statusbar plugin is added, it also adds default setting to make the content white via:
+
+       <preference name="StatusBarStyle" value="lightcontent"/>
+
+   Setting the background color to black will allow the default light content (white text/icons) to show on it. The statusbar plugin is included
+   in the config.xml file and will be added by the CLI when you build locally.
+
+   See https://github.com/apache/cordova-plugin-statusbar
+*/
+
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/MaterialIcons-Regular.eot); /* For IE6-8 */
+  src: local('Material Icons'),
+       local('MaterialIcons-Regular'),
+       url(../fonts/MaterialIcons-Regular.woff2) format('woff2'),
+       url(../fonts/MaterialIcons-Regular.woff) format('woff'),
+       url(../fonts/MaterialIcons-Regular.ttf) format('truetype');
+}
+
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+
+.statusbar-overlay {
+    background: #000000;
+}
+
+#colorPickerDiv{
+	
+margin: auto;
+}
+/*
+#colorPickerInput{
+	
+width: 500px;
+height: 500px;
+left: 50%;
+  margin-left: -50px;
+}*/
+.picker{
+	/*position:absolute;
+	top: -1.5em;*/
+	width: 100%;
+	height: 100%;
+}
+/*
+#colorPickerDivWraper{
+	margin: auto;
+	width:90%;
+}
+*/
+ #colorPickerRGBIcon{
+	 position:absolute;
+	float: left;
+	
+ }
+ 
+
+
+ #gradient-settings{
+   box-sizing: border-box;
+margin: auto;
+/* border: 1px solid black; */
+overflow: hidden;
+width: 95px;
+ }
+
+ #fire-gradient{
+  background-color: red;
+  background-image: linear-gradient(to top, white, orange, red, black);
+  box-shadow: 0 0px 2px black;
+  width: 40px;
+  height: 250px;
+  margin: auto;
+  display: inline-block;
+  position: absolute;
+  top: 30px;
+ }
+
+ #gradient-stops{
+  display: inline-block;
+  width: 50px;
+  height: 310px;
+  /* border:1px solid magenta; */
+ }
+
+ #fire-gradient, #gradient-stops{
+   float:left;
+   position: relative;
+   margin: auto;
+ }
+
+
+ .gradient-color-stops{
+   position: absolute;
+   height: 2px;
+   width:30px;
+   right: 0;
+   box-shadow: 0 0px 2px black;
+ }
+
+ .gradient-color-stops::before{
+content: "";
+background-color: inherit;
+width: 24px;
+height: 24px;
+display: inline-block; 
+border-radius: 12px;
+position: absolute;
+top: -10px;
+left: -10px;
+z-index: inherit;
+box-shadow: inherit;
+}
+
+#color-stop-4{
+  background-color: red;
+  bottom: 30px;
+}
+#color-stop-3{
+  background-color: blue;
+  top: 197px;
+}
+#color-stop-2{
+  background-color: magenta;
+  top: 113px;
+}
+#color-stop-1{
+  background-color: red;
+  top: 30px;
+}
